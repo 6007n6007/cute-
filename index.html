@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Special Star ✦</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="stars"></div>
+    <div id="sparkles"></div>
+
+    <div class="moon">
+        <div class="moon-crater crater1"></div>
+        <div class="moon-crater crater2"></div>
+        <div class="moon-crater crater3"></div>
+    </div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+    <div class="floating floating1">♡</div>
+    <div class="floating floating2">✦</div>
+    <div class="floating floating3">୨୧</div>
+    <div class="floating floating4">✧</div>
+    <div class="floating floating5">♡</div>
+
+    <!-- PAGE 1 -->
+    <section id="page1" class="page active">
+
+        <div class="top-tag">
+            ✦ A tiny universe for someone special ✦
+        </div>
+
+        <div class="hero-content">
+
+            <div class="mini-star">✦</div>
+
+            <h1>
+                بعضی آدما
+                <span>خودشون یه ستاره‌ان.</span>
+            </h1>
+
+            <p>
+                و اینجا قراره چندتا از اون چیزایی رو
+                که باعث میشه تو خاص باشی، پیدا کنی...
+            </p>
+
+            <button class="main-btn" onclick="goToPage(2)">
+                وارد دنیای کوچیکت شو
+                <span>✦</span>
+            </button>
+
+        </div>
+
+        <div class="bottom-note">
+            scroll down ✦
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 2 -->
+    <section id="page2" class="page">
+
+        <div class="section-title">
+            <span>✦</span>
+            <h2>Welcome to your universe</h2>
+            <span>✦</span>
+        </div>
+
+        <p class="section-subtitle">
+            هر چیزی که اینجاست، یه معنی کوچیک داره.
+        </p>
+
+        <div class="universe-grid">
+
+            <div class="universe-card" onclick="openMessage('star')">
+                <div class="card-icon">⭐</div>
+                <h3>ستاره‌ها</h3>
+                <p>چندتا حرف کوچیک که شاید لازم باشه بشنوی.</p>
+                <span>tap me ✦</span>
+            </div>
+
+            <div class="universe-card" onclick="openMessage('heart')">
+                <div class="card-icon">♡</div>
+                <h3>چیزای کوچیک</h3>
+                <p>چیزایی که شاید خودت درباره خودت ندونی.</p>
+                <span>open ♡</span>
+            </div>
+
+            <div class="universe-card" onclick="openMessage('moon')">
+                <div class="card-icon">☾</div>
+                <h3>ماه</h3>
+                <p>برای وقتایی که روزت اون‌قدرا هم خوب نبوده.</p>
+                <span>for you ☾</span>
+            </div>
+
+            <div class="universe-card" onclick="openMessage('gift')">
+                <div class="card-icon">🎀</div>
+                <h3>یه هدیه‌ی کوچیک</h3>
+                <p>چیزی که آخر این مسیر منتظرته.</p>
+                <span>secret 🎀</span>
+            </div>
+
+        </div>
+
+        <button class="next-btn" onclick="goToPage(3)">
+            ادامه بدیم؟ ✨
+        </button>
+
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section id="page3" class="page">
+
+        <div class="section-title">
+            <span>✦</span>
+            <h2>Find the stars</h2>
+            <span>✦</span>
+        </div>
+
+        <p class="section-subtitle">
+            روی ستاره‌ها کلیک کن و پیام‌هاشون رو پیدا کن.
+        </p>
+
+        <div class="star-area">
+
+            <button class="click-star star-a" onclick="showStar(0)">✦</button>
+            <button class="click-star star-b" onclick="showStar(1)">★</button>
+            <button class="click-star star-c" onclick="showStar(2)">✧</button>
+            <button class="click-star star-d" onclick="showStar(3)">✦</button>
+            <button class="click-star star-e" onclick="showStar(4)">★</button>
+            <button class="click-star star-f" onclick="showStar(5)">✧</button>
+            <button class="click-star star-g" onclick="showStar(6)">✦</button>
+            <button class="click-star star-h" onclick="showStar(7)">★</button>
+
+            <div class="constellation-center">
+                <span>your little<br>constellation</span>
+            </div>
+
+        </div>
+
+        <div id="starCounter">
+            0 / 8 stars found
+        </div>
+
+        <button id="constellationBtn" class="next-btn hidden" onclick="goToPage(4)">
+            صورت فلکی کامل شد ✨
+        </button>
+
+    </section>
+
+
+    <!-- PAGE 4 -->
+    <section id="page4" class="page">
+
+        <div class="section-title">
+            <span>♡</span>
+            <h2>Things you should know</h2>
+            <span>♡</span>
+        </div>
+
+        <div class="compliment-box">
+
+            <div class="quote-mark">“</div>
+
+            <p id="compliment">
+                بعضی چیزها درباره‌ی خودت هست
+                که شاید هیچ‌وقت بهشون توجه نکرده باشی...
+            </p>
+
+            <div class="line"></div>
+
+            <button onclick="newCompliment()">
+                یکی دیگه بگو ✦
+            </button>
+
+        </div>
+
+        <div class="little-things">
+
+            <div class="little">
+                <span>☁</span>
+                <p>بودنت گاهی بدون اینکه بفهمی، حال یه نفر رو بهتر می‌کنه.</p>
+            </div>
+
+            <div class="little">
+                <span>🌷</span>
+                <p>بهتره بدونی که بودنت دغدغه ی زندگی خلی از آدم ها هست</p>
+            </div>
+
+            <div class="little">
+                <span>🪽</span>
+                <p>تو خیلی بیشتر از چیزی که هستی ارزش داری و تو بهترینی.</p>
+            </div>
+
+        </div>
+
+        <button class="next-btn" onclick="goToPage(5)">
+            یه چیز دیگه مونده... 🎀
+        </button>
+
+    </section>
+
+
+    <!-- PAGE 5 -->
+    <section id="page5" class="page">
+
+        <div class="section-title">
+            <span>🎀</span>
+            <h2>Open when you need it</h2>
+            <span>🎀</span>
+        </div>
+
+        <p class="section-subtitle">
+            یکی رو انتخاب کن...
+        </p>
+
+        <div class="envelope-grid">
+
+            <button onclick="openEnvelope(0)">
+                <span>☁️</span>
+                <strong>وقتی روز بدی داشتی</strong>
+            </button>
+
+            <button onclick="openEnvelope(1)">
+                <span>🌙</span>
+                <strong>وقتی به خودت شک کردی</strong>
+            </button>
+
+            <button onclick="openEnvelope(2)">
+                <span>⭐</span>
+                <strong>وقتی نیاز به لبخند داری</strong>
+            </button>
+
+            <button onclick="openEnvelope(3)">
+                <span>🪽</span>
+                <strong>وقتی خسته‌ای</strong>
+            </button>
+
+        </div>
+
+        <button class="next-btn" onclick="goToPage(6)">
+            آخرین مرحله ⭐
+        </button>
+
+    </section>
+
+
+    <!-- PAGE 6 -->
+    <section id="page6" class="page final-page">
+
+        <div class="final-stars">
+            ✦　⋆　✧　⭐　✧　⋆　✦
+        </div>
+
+        <div class="final-card">
+
+            <div class="big-star">⭐</div>
+
+            <h1>
+                و حالا...
+                <span>مهم‌ترین قسمت</span>
+            </h1>
+
+            <p>
+                شاید هیچ‌وقت نتونم دقیقاً توضیح بدم
+                چرا بودنت برای من ارزشمنده.
+            </p>
+
+            <p>
+                ولی می‌خوام بدونی که برای تمام لحظه‌هایی
+                که باعث شدی لبخند بزنم،
+                برای تمام مهربونی‌هات،
+                برای انرژی قشنگت،
+                و حتی برای همین که خودِ خودتی...
+            </p>
+
+            <div class="thank-you">
+                ممنونم که هستی. 🤍
+            </div>
+            <div class="signature">
+                made with a little bit of love & lots of stars ✦
+            </div>
+
+        </div>
+
+        <button class="restart-btn" onclick="restart()">
+            دوباره از اول ✧
+        </button>
+
+    </section>
+
+
+    <!-- MESSAGE MODAL -->
+    <div id="modal" class="modal">
+
+        <div class="modal-card">
+
+            <button class="close" onclick="closeModal()">×</button>
+
+            <div id="modalIcon" class="modal-icon">⭐</div>
+
+            <h2 id="modalTitle">یه پیام برای تو</h2>
+
+            <p id="modalText"></p>
+
+            <button onclick="closeModal()">
+                گرفتمش 🤍
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
